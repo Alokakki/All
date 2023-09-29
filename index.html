@@ -3,31 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiple Blocks with Linked Buttons</title>
+    <title>Beautiful Blocks with Linked Buttons</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 900px;
         }
 
         .block {
             width: 200px;
             height: 200px;
-            background-color: #f9f9f9;
+            background-color: #fff;
             border: 1px solid #ccc;
-            margin: 10px;
-            display: inline-block;
-            vertical-align: top;
-            transition: transform 0.3s;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .block:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            margin: 10px 0;
+            font-size: 1.5em;
+            color: #333;
         }
 
         .button {
-            display: block;
-            margin: 20px auto;
+            display: inline-block;
             padding: 10px 20px;
             background-color: #4caf50;
             color: white;
@@ -36,6 +59,7 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+            transition: background-color 0.3s;
         }
 
         .button:hover {
@@ -45,24 +69,28 @@
 </head>
 <body>
 
-<div class="block">
-    <h2>Block 1</h2>
-    <a class="button" href="#">Button 1</a>
-</div>
+<div class="container">
 
-<div class="block">
-    <h2>Block 2</h2>
-    <a class="button" href="#">Button 2</a>
-</div>
+    <div class="block">
+        <h2>Block 1</h2>
+        <a class="button" href="#">Button 1</a>
+    </div>
 
-<div class="block">
-    <h2>Block 3</h2>
-    <a class="button" href="#">Button 3</a>
-</div>
+    <div class="block">
+        <h2>Block 2</h2>
+        <a class="button" href="#">Button 2</a>
+    </div>
 
-<div class="block">
-    <h2>Block 4</h2>
-    <a class="button" href="#">Button 4</a>
+    <div class="block">
+        <h2>Block 3</h2>
+        <a class="button" href="#">Button 3</a>
+    </div>
+
+    <div class="block">
+        <h2>Block 4</h2>
+        <a class="button" href="#">Button 4</a>
+    </div>
+
 </div>
 
 </body>
